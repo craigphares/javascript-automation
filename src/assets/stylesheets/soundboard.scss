@@ -49,7 +49,8 @@ html, body {
   .sounds {
     position: absolute;
     left: 15px;
-    bottom: 20px;
+    bottom: 15px;
+    // top: 0;
     list-style: none;
     padding-left: 0;
     margin: 0;
@@ -68,7 +69,7 @@ html, body {
         width: 100px;
         height: 40px;
         text-align: left;
-        border: 1px solid #cc0099;
+        border: 1px solid $button-border-color;
         outline: none;
         @include transition(all 0.3s linear);
         @include box-shadow(0 0 5px 2px $button-glow-color);
@@ -121,11 +122,10 @@ html, body {
           @include box-shadow(0 0 5px 5px rgba(0, 255, 0, 0.5));
         }
 
-        .volume {
-          // display: block;
-          opacity: 1;
-          pointer-events: all;
-        }
+        // .volume {
+        //   opacity: 1;
+        //   pointer-events: all;
+        // }
       }
 
     }
@@ -226,7 +226,7 @@ html, body {
 
   .subtitle {
     position: absolute;
-    color: #ff00cc;
+    color: $primary-color;
     top: 30px;
     right: 15px;
     font-size: 18px;

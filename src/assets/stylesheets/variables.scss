@@ -1,5 +1,9 @@
 $bobble-distance-short: 4px;
 $bobble-distance-long: 8px;
 
-$button-color: #ff00cc;
-$button-glow-color: rgba(255, 0, 255, 0.5);
+$primary-color: #ff00cc;
+// $primary-color: #00ffff;
+
+$button-color: $primary-color;
+$button-border-color: darken($primary-color, 0.2);
+$button-glow-color: rgba($primary-color, 0.5);
