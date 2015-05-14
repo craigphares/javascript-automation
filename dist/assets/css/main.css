@@ -1,0 +1,304 @@
+@-webkit-keyframes bobble {
+  0% {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+  25% {
+    -webkit-transform: translate(0, 4px);
+    -ms-transform: translate(0, 4px);
+    -o-transform: translate(0, 4px);
+    transform: translate(0, 4px); }
+
+  50% {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+  75% {
+    -webkit-transform: translate(0, -4px);
+    -ms-transform: translate(0, -4px);
+    -o-transform: translate(0, -4px);
+    transform: translate(0, -4px); }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+
+@keyframes bobble {
+  0% {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+  25% {
+    -webkit-transform: translate(0, 4px);
+    -ms-transform: translate(0, 4px);
+    -o-transform: translate(0, 4px);
+    transform: translate(0, 4px); }
+
+  50% {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+  75% {
+    -webkit-transform: translate(0, -4px);
+    -ms-transform: translate(0, -4px);
+    -o-transform: translate(0, -4px);
+    transform: translate(0, -4px); }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+
+@-webkit-keyframes bobble-2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+  25% {
+    -webkit-transform: translate(0, 8px);
+    -ms-transform: translate(0, 8px);
+    -o-transform: translate(0, 8px);
+    transform: translate(0, 8px); }
+
+  50% {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+  75% {
+    -webkit-transform: translate(0, -8px);
+    -ms-transform: translate(0, -8px);
+    -o-transform: translate(0, -8px);
+    transform: translate(0, -8px); }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+
+@keyframes bobble-2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+  25% {
+    -webkit-transform: translate(0, 8px);
+    -ms-transform: translate(0, 8px);
+    -o-transform: translate(0, 8px);
+    transform: translate(0, 8px); }
+
+  50% {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+
+  75% {
+    -webkit-transform: translate(0, -8px);
+    -ms-transform: translate(0, -8px);
+    -o-transform: translate(0, -8px);
+    transform: translate(0, -8px); }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  overflow: hidden; }
+
+.soundboard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden; }
+  .soundboard .starfield {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+  .soundboard .sounds {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    list-style: none;
+    padding-left: 0;
+    margin: 0; }
+    .soundboard .sounds li {
+      margin-bottom: 5px;
+      position: relative; }
+      .soundboard .sounds li button {
+        background-color: #ff00cc;
+        color: white;
+        border: none;
+        cursor: pointer;
+        opacity: 0.7;
+        border-radius: 4px;
+        width: 100px;
+        height: 40px;
+        text-align: left;
+        border: 1px solid #fe00cb;
+        outline: none;
+        -webkit-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+        -webkit-box-shadow: 0 0 5px 2px rgba(255, 0, 204, 0.5);
+        box-shadow: 0 0 5px 2px rgba(255, 0, 204, 0.5); }
+        .soundboard .sounds li button:active {
+          -webkit-transform: scale(0.9);
+          -ms-transform: scale(0.9);
+          -o-transform: scale(0.9);
+          transform: scale(0.9); }
+        .soundboard .sounds li button:hover {
+          opacity: 1;
+          -webkit-box-shadow: 0 0 5px 5px rgba(255, 0, 204, 0.5);
+          box-shadow: 0 0 5px 5px rgba(255, 0, 204, 0.5); }
+      .soundboard .sounds li .volume {
+        width: 100px;
+        height: 10px;
+        background-color: #fff;
+        position: absolute;
+        top: 15px;
+        left: 120px;
+        pointer-events: none;
+        opacity: 0;
+        -webkit-transition: opacity 0.3s linear;
+        -o-transition: opacity 0.3s linear;
+        transition: opacity 0.3s linear; }
+        .soundboard .sounds li .volume .ui-slider-handle {
+          position: absolute;
+          top: -5px;
+          margin-left: -10px;
+          z-index: 2;
+          width: 20px;
+          height: 20px;
+          background-color: #ff00cc;
+          outline: none;
+          cursor: default; }
+      .soundboard .sounds li.playing button {
+        opacity: 0.9;
+        background-color: #00cc00;
+        border: 1px solid #009900;
+        -webkit-box-shadow: 0 0 5px 5px rgba(0, 255, 0, 0.5);
+        box-shadow: 0 0 5px 5px rgba(0, 255, 0, 0.5); }
+  .soundboard .bobblehead {
+    position: absolute;
+    right: 5px;
+    width: 197px;
+    height: 356px; }
+    .soundboard .bobblehead .base {
+      position: absolute;
+      left: 0; }
+    .soundboard .bobblehead .head {
+      position: absolute; }
+    .soundboard .bobblehead.bobbling.bobbling-1 .head {
+      -webkit-animation: bobble 0.9s infinite;
+      -o-animation: bobble 0.9s infinite;
+      animation: bobble 0.9s infinite; }
+    .soundboard .bobblehead.bobbling.bobbling-2 .head {
+      -webkit-animation: bobble 0.8s infinite;
+      -o-animation: bobble 0.8s infinite;
+      animation: bobble 0.8s infinite; }
+    .soundboard .bobblehead.bobbling.bobbling-3 .head {
+      -webkit-animation: bobble 0.7s infinite;
+      -o-animation: bobble 0.7s infinite;
+      animation: bobble 0.7s infinite; }
+    .soundboard .bobblehead.bobbling.bobbling-4 .head {
+      -webkit-animation: bobble 0.6s infinite;
+      -o-animation: bobble 0.6s infinite;
+      animation: bobble 0.6s infinite; }
+    .soundboard .bobblehead.bobbling.bobbling-5 .head {
+      -webkit-animation: bobble-2 0.5s infinite;
+      -o-animation: bobble-2 0.5s infinite;
+      animation: bobble-2 0.5s infinite; }
+    .soundboard .bobblehead.bobbling.bobbling-6 .head {
+      -webkit-animation: bobble-2 0.4s infinite;
+      -o-animation: bobble-2 0.4s infinite;
+      animation: bobble-2 0.4s infinite; }
+    .soundboard .bobblehead.bobbling.bobbling-7 .head {
+      -webkit-animation: bobble-2 0.3s infinite;
+      -o-animation: bobble-2 0.3s infinite;
+      animation: bobble-2 0.3s infinite; }
+    .soundboard .bobblehead.bobbling.bobbling-8 .head {
+      -webkit-animation: bobble-2 0.2s infinite;
+      -o-animation: bobble-2 0.2s infinite;
+      animation: bobble-2 0.2s infinite; }
+    .soundboard .bobblehead.bobbling.bobbling-9 .head {
+      -webkit-animation: bobble-2 0.1s infinite;
+      -o-animation: bobble-2 0.1s infinite;
+      animation: bobble-2 0.1s infinite; }
+    .soundboard .bobblehead.boba-fett {
+      bottom: -88px; }
+      .soundboard .bobblehead.boba-fett .base {
+        background-image: url(../images/boba-fett-base.png);
+        width: 197px;
+        height: 183px;
+        top: 173px; }
+      .soundboard .bobblehead.boba-fett .head {
+        background-image: url(../images/boba-fett-head.png);
+        width: 167px;
+        height: 191px;
+        left: 15px;
+        top: 5px; }
+    .soundboard .bobblehead.stormtrooper {
+      bottom: -118px; }
+      .soundboard .bobblehead.stormtrooper .base {
+        background-image: url(../images/stormtrooper-base.png);
+        width: 1188px;
+        height: 176px;
+        top: 135px; }
+      .soundboard .bobblehead.stormtrooper .head {
+        background-image: url(../images/stormtrooper-head.png);
+        width: 173px;
+        height: 141px;
+        left: 6px;
+        top: 8px; }
+  .soundboard .title {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: normal; }
+  .soundboard .subtitle {
+    position: absolute;
+    color: #ff00cc;
+    top: 30px;
+    right: 15px;
+    font-size: 18px;
+    font-weight: normal; }
+  .soundboard .slider {
+    height: 200px; }
