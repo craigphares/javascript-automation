@@ -1,0 +1,240 @@
+@include keyframes(bobble) {
+  0% { @include translate(0, 0); }
+  25% { @include translate(0, $bobble-distance-short); }
+  50% { @include translate(0, 0); }
+  75% { @include translate(0, -$bobble-distance-short); }
+  100% { @include translate(0, 0); } 
+}
+
+@include keyframes(bobble-2) {
+  0% { @include translate(0, 0); }
+  25% { @include translate(0, $bobble-distance-long); }
+  50% { @include translate(0, 0); }
+  75% { @include translate(0, -$bobble-distance-long); }
+  100% { @include translate(0, 0); }
+}
+
+// Reset the box-sizing
+* {
+  @include box-sizing(border-box);
+}
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.soundboard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  
+  .starfield {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .sounds {
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 5px;
+      position: relative;
+
+      button {
+        background-color: $button-color;
+        color: white;
+        border: none;
+        cursor: pointer;
+        opacity: 0.7;
+        border-radius: 4px;
+        width: 100px;
+        height: 40px;
+        text-align: left;
+        border: 1px solid #cc0099;
+        outline: none;
+        @include transition(all 0.3s linear);
+        @include box-shadow(0 0 5px 2px $button-glow-color);
+      
+        &:active {
+          @include scale(0.9);
+        }
+
+        &:hover {
+          // button {
+            opacity: 1;
+            @include box-shadow(0 0 5px 5px $button-glow-color);
+          // }
+        }
+      }
+
+      .volume {
+        width: 100px;
+        height: 10px;
+        background-color: #fff;
+        // position: relative;
+        position: absolute;
+        top: 15px;
+        left: 120px;
+        // display: none;
+        pointer-events: none;
+        opacity: 0;
+        @include transition(opacity 0.3s linear);
+
+
+        .ui-slider-handle {
+          position: absolute;
+          top: -5px;
+          margin-left: -10px;
+          z-index: 2;
+          width: 20px;
+          height: 20px;
+          background-color: $button-color;
+          outline: none;
+          cursor: default;
+        }
+      }
+
+      &.playing {
+        button {
+          opacity: 0.9;
+          background-color: #00cc00;
+          border: 1px solid #009900;
+
+          @include box-shadow(0 0 5px 5px rgba(0, 255, 0, 0.5));
+        }
+
+        .volume {
+          // display: block;
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+
+    }
+  }
+
+  .bobblehead {
+    position: absolute;
+    right: 5px;
+    width: 197px;
+    height: 356px;
+
+    .base {
+      position: absolute;
+      left: 0;
+    }
+
+    .head {
+      position: absolute; 
+    }
+
+    &.bobbling {
+      &.bobbling-1 .head {
+        @include animation(bobble 0.9s infinite);
+      }
+      &.bobbling-2 .head {
+        @include animation(bobble 0.8s infinite);
+      }
+      &.bobbling-3 .head {
+        @include animation(bobble 0.7s infinite);
+      }
+      &.bobbling-4 .head {
+        @include animation(bobble 0.6s infinite);
+      }
+      &.bobbling-5 .head {
+        @include animation(bobble-2 0.5s infinite);
+      }
+      &.bobbling-6 .head {
+        @include animation(bobble-2 0.4s infinite);
+      }
+      &.bobbling-7 .head {
+        @include animation(bobble-2 0.3s infinite);
+      }
+      &.bobbling-8 .head {
+        @include animation(bobble-2 0.2s infinite);
+      }
+      &.bobbling-9 .head {
+        @include animation(bobble-2 0.1s infinite);
+      }
+    }
+
+    &.boba-fett {
+      bottom: -88px;
+
+      .base {
+        background-image: url(../images/boba-fett-base.png);
+        width: 197px;
+        height: 183px;
+        top: 173px;
+      }
+      .head {
+        background-image: url(../images/boba-fett-head.png);
+        width: 167px;
+        height: 191px;
+        left: 15px;
+        top: 5px;
+
+      }
+    }
+
+    &.stormtrooper {
+      bottom: -118px;
+
+      .base {
+        background-image: url(../images/stormtrooper-base.png);
+        width: 1188px;
+        height: 176px;
+        top: 135px;
+      }
+      .head {
+        background-image: url(../images/stormtrooper-head.png);
+        width: 173px;
+        height: 141px;
+        left: 6px;
+        top: 8px;
+      }
+    }
+    
+  }
+
+  .title {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: normal;
+  }
+
+  .subtitle {
+    position: absolute;
+    color: #ff00cc;
+    top: 30px;
+    right: 15px;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .slider {
+    height: 200px;
+  }
+
+}
